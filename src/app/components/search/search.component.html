@@ -5,7 +5,6 @@
   </div>
 </div>
 
-<app-spinner *ngIf="loading" class="animated fadeIn"></app-spinner>
-
-<app-card *ngIf="!loading" [items]="artists" class="animated fadeIn"></app-card>
-
+<app-spinner *ngIf="loading && !errorMessage" class="animated fadeIn"></app-spinner>
+<app-error *ngIf="errorMessage" [errorMessage]="errorMessage"></app-error>
+<app-card *ngIf="!loading && !errorMessage" [items]="artists" class="animated fadeIn"></app-card>

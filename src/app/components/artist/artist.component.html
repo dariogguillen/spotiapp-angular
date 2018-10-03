@@ -15,7 +15,7 @@
     </button>
   </div>
 </div>
-<div class="row mt-5">
+<div *ngIf="!loading" class="row mt-5">
   <div class="col">
     <table class="table">
       <thead>
@@ -34,7 +34,8 @@
           <td>{{ track.album.name }}</td>
           <td>{{ track.name }}</td>
           <td>
-            <audio [src]="track.preview_url" controls></audio>
+            <!-- <audio [src]="track.preview_url" controls></audio> -->
+            <iframe [src]="track.uri | domSecure" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
           </td>
         </tr>
       </tbody>

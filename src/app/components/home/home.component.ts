@@ -9,11 +9,14 @@ import { SpotifyService } from '../../services/spotify.service';
 export class HomeComponent implements OnInit {
   albums: any[] = [];
   loading = true;
+  errorMessage: string;
   constructor(private spotifyService: SpotifyService) {
     this.spotifyService.getNewReleases()
       .subscribe((data: any) => {
         this.albums = data;
         this.loading = false;
+      }, error => {
+        this.errorMessage = error.error.error.message;
       });
   }
 

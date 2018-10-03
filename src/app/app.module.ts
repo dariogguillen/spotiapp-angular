@@ -17,6 +17,8 @@ import { InterceptorService } from './services/interceptor.service';
 import { NoimagePipe } from './pipes/noimage.pipe';
 import { CardComponent } from './components/shared/card/card.component';
 import { SpinnerComponent } from './components/shared/spinner/spinner.component';
+import { DomSecurePipe } from './pipes/dom-secure.pipe';
+import { ErrorComponent } from './components/shared/error/error.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { SpinnerComponent } from './components/shared/spinner/spinner.component'
     NavbarComponent,
     NoimagePipe,
     CardComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    DomSecurePipe,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
