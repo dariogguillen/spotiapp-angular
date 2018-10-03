@@ -14,7 +14,7 @@ export class InterceptorService implements HttpInterceptor {
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     const headers = new HttpHeaders({
-      'Authorization': 'Bearer BQD7HaUWgZcxKiO34Rk8obffxPiiaUgnP9XnQKGO6LmhMLAZyA5kx-Ce4_nJJpwtwgy3Qsi0jzTpjq1E8Qc'
+      'Authorization': 'Bearer BQAVgCXGesBzpIJj9ZrM_cHQwTR_AaZsqWUeE66bRectVGC6-rR486pqoDA0NEetpsknaYqOh74F3vm7tFQ'
     });
     const AuthRequest = request.clone({ headers });
     return next.handle(AuthRequest);

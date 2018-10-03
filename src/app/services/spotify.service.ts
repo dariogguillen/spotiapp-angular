@@ -24,4 +24,11 @@ export class SpotifyService {
     return this.getQuery(`search?q=${str}&type=artist&limit=10`)
       .pipe(map(data => data['artists'].items));
   }
+  public searchArtist (id: string) {
+    return this.getQuery(`artists/${id}`);
+  }
+  public getTopTracks (id: string) {
+    return this.getQuery(`artists/${id}/top-tracks?country=MX`)
+      .pipe(map(data => data['tracks']));
+  }
 }

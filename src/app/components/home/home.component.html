@@ -1,13 +1,2 @@
-<div class="card-columns">
-  <div *ngFor="let album of albums" class="card">
-    <img class="card-img-top" [src]="album.images | noimage" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">{{ album.name }}</h5>
-      <p class="card-text">
-        <span *ngFor="let artist of album.artists" class="badge badge-secondary">
-          {{ artist.name }}
-        </span>
-      </p>
-    </div>
-  </div>
-</div>
+<app-spinner *ngIf="loading" class="animated fadeIn"></app-spinner>
+<app-card *ngIf="!loading" [items]="albums" class="animated fadeIn"></app-card>

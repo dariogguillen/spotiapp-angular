@@ -1,0 +1,13 @@
+<div class="card-columns">
+  <div *ngFor="let item of items" (click)="getArtist(item)" class="card puntero">
+    <img class="card-img-top" [src]="item.images | noimage" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{ item.name }}</h5>
+      <p *ngIf="item.artists" class="card-text">
+        <span *ngFor="let artist of item.artists" class="badge badge-secondary">
+          {{ artist.name }}
+        </span>
+      </p>
+    </div>
+  </div>
+</div>

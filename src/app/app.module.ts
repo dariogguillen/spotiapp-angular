@@ -15,6 +15,8 @@ import { ROUTES } from './app.routes';
 // servicios
 import { InterceptorService } from './services/interceptor.service';
 import { NoimagePipe } from './pipes/noimage.pipe';
+import { CardComponent } from './components/shared/card/card.component';
+import { SpinnerComponent } from './components/shared/spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { NoimagePipe } from './pipes/noimage.pipe';
     SearchComponent,
     ArtistComponent,
     NavbarComponent,
-    NoimagePipe
+    NoimagePipe,
+    CardComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
